@@ -11,7 +11,8 @@ warnings.filterwarnings('ignore')
 
 
 # Load the csv file
-df = pd.read_csv("storefront.csv")
+df = pd.read_csv(
+    "../../../../1.Supun Sameera/Software Engineering(SLIIT)/Semester 6/FDM/Assignment/ML Model Deployment/storefront.csv")
 df = df[['OrderDate', 'Segment', 'City', 'State', 'Region', 'SubCategory', 'Discount']].copy()
 
 
