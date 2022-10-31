@@ -1,5 +1,6 @@
 import pickle
 import numpy as np
+import pandas as pd
 from flask import Flask, request, jsonify, render_template
 from sklearn.preprocessing import LabelEncoder
 
@@ -25,6 +26,21 @@ def discount():
 @app.route('/sales_target')
 def sales_target():
     return render_template("regression.html")
+
+
+@app.route('/loyal')
+def loyal():
+    # Load the csv file
+    df = pd.read_csv("cluster-df.csv")
+    df["cluster"] = cluster.labels_
+    print(df)
+    rslt_df_1 = df.loc[df['cluster'] == 0]
+    rslt_df_2 = df.loc[df['cluster'] == 1]
+    rslt_df_1 = rslt_df_1['CustomerID'].values.tolist()
+    rslt_df_2 = rslt_df_2['CustomerID'].values.tolist()
+    print(rslt_df_1)
+    print(rslt_df_2)
+    return render_template("cluster.html", cluster1=rslt_df_1, cluster2=rslt_df_2)
 
 
 @app.route("/predict_discount", methods=["POST"])
@@ -55,7 +71,7 @@ def predict_sales_target():
 
     features = [np.array(val_list)]
     prediction = regression.predict(features)
-    return render_template("regression.html", prediction_text="Target Sales is {}".format(prediction))
+    return render_template("regression.html", prediction_text="Target Quantity is {}".format(prediction))
 
 
 if __name__ == "__main__":
