@@ -9,6 +9,7 @@ app = Flask(__name__)
 # Load the pickle model
 classification = pickle.load(open("classification.pkl", "rb"))
 regression = pickle.load(open("regression.pkl", "rb"))
+cluster = pickle.load(open("cluster.pkl", "rb"))
 
 
 @app.route("/")
