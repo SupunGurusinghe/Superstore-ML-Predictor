@@ -11,7 +11,7 @@ warnings.filterwarnings('ignore')
 
 
 # Load the csv file
-df = pd.read_csv("data.csv")
+df = pd.read_csv("data1.csv")
 df = df[['OrderWeek', 'Segment', 'City', 'State', 'Region', 'SubCategory', 'Discount']].copy()
 df.columns = ['OrderWeek', 'Segment', 'City', 'State', 'Region', 'SubCategory', 'Discount']
 
