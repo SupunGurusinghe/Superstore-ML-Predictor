@@ -1,8 +1,7 @@
 import pickle
 import pandas as pd
 import numpy as np
-import gower
-from sklearn.cluster import DBSCAN
+from sklearn.cluster import KMeans
 
 
 # Load the csv file
@@ -48,19 +47,12 @@ f_df = f_df.astype(convert_dict)
 f_df = f_df.fillna(0)
 
 
-# gower distance calculate
-distance_matrix = gower.gower_matrix(f_df)
+# k means
+k_means = KMeans(n_clusters=2, random_state=42)
 
-
-# Configuring the parameters of the clustering algorithm
-dbscan_cluster = DBSCAN(eps=0.3,
-                        min_samples=2,
-                        metric="precomputed")
-
-
-# Fitting the clustering algorithm
-dbscan_cluster.fit(distance_matrix)
+# model train
+k_means.fit(f_df[['MaximumDate', 'Count', 'Sales']])
 
 
 # Make pickle file of our model
-pickle.dump(dbscan_cluster, open("cluster.pkl", "wb"))
+pickle.dump(k_means, open("cluster.pkl", "wb"))
