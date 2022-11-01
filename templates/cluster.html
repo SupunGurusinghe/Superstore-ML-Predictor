@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Disloyal Customers</title>
     <style>
       * {
         box-sizing: border-box;
@@ -10,32 +10,44 @@
 
       body {
         font-family: Arial, Helvetica, sans-serif;
-        background-image: url('/static/images/discount.png');
+        background-image: url('/static/images/c.jpeg');
+        background-attachment: fixed;
       }
 
       #customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 35%;
-}
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 35%;
+       }
 
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-}
+      #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+      #customers tr:nth-child(even){background-color: #f2f2f2;}
 
-#customers tr:hover {background-color: #ddd;}
+      #customers tr:hover {background-color: #ddd;}
 
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  background-color: #04AA6D;
-  color: white;
-}
+      #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #04AA6D;
+        color: white;
+      }
+
+
+
+      h1 {
+        margin-top: 140px;
+        margin-bottom: 50px;
+        font-weight: bold;
+        color: black;
+        opacity: 1;
+      }
+
 
       .header {
         position: fixed;
@@ -56,11 +68,13 @@
     </style>
 </head>
 <body>
-
+    <div class="header"></div>
 
   <center>
-     <table id="customers">
 
+      <h1>Disloyal Customer List</h1>
+      <hr>
+     <table id="customers">
           <thead>
             <tr>
                 <th>Cus ID</th>
@@ -76,6 +90,6 @@
 
       </table>
   </center>
-
+    <div class="footer"></div>
 </body>
 </html>
