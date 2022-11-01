@@ -13,7 +13,6 @@ warnings.filterwarnings('ignore')
 # Load the csv file
 df = pd.read_csv("data.csv")
 df = df[['OrderWeek', 'Segment', 'City', 'State', 'Region', 'SubCategory', 'Discount']].copy()
-
 df.columns = ['OrderWeek', 'Segment', 'City', 'State', 'Region', 'SubCategory', 'Discount']
 
 
@@ -25,7 +24,7 @@ df['Segment'] = le.fit_transform(df['Segment'])
 df['State'] = le.fit_transform(df['State'])
 df['Region'] = le.fit_transform(df['Region'])
 df['SubCategory'] = le.fit_transform(df['SubCategory'])
-df['Discount'] = le.fit_transform(df['Discount'])
+df = df.astype({'Discount': 'category'})
 
 
 # Split dataset
