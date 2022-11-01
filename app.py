@@ -34,6 +34,11 @@ def product():
     return render_template("association.html")
 
 
+@app.route("/analyze")
+def analyze():
+    return render_template("your_report.html")
+
+
 @app.route('/loyal')
 def loyal():
     # Load the csv file
