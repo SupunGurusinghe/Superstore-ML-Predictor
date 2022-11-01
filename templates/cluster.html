@@ -13,43 +13,29 @@
         background-image: url('/static/images/discount.png');
       }
 
-      /* Float four columns side by side */
-      .column {
-        float: left;
-        width: 25%;
-        padding: 0 10px;
-      }
+      #customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 35%;
+}
 
-      /* Remove extra left and right margins, due to padding */
-      .row {
-        margin: 250px 40px 100px 40px;
-      }
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
 
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
+#customers tr:nth-child(even){background-color: #f2f2f2;}
 
-      /* Responsive columns */
-      @media screen and (max-width: 600px) {
-        .column {
-          width: 100%;
-          display: block;
-          margin-bottom: 20px;
-        }
-      }
+#customers tr:hover {background-color: #ddd;}
 
-      /* Style the counter cards */
-      .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        padding: 16px;
-        text-align: center;
-        background-color: coral;
-        color: #f1f1f1;
-        border-radius: 30px;
-      }
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+}
 
       .header {
         position: fixed;
@@ -73,10 +59,11 @@
 
 
   <center>
-      <table>
+     <table id="customers">
+
           <thead>
             <tr>
-                <td>Cus ID</td>
+                <th>Cus ID</th>
             </tr>
           </thead>
           <tbody>

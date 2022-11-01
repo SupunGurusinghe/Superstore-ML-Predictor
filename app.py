@@ -16,7 +16,7 @@ cluster = pickle.load(open("cluster.pkl", "rb"))
 
 @app.route("/")
 def Home():
-    return render_template("home.html")
+    return render_template("home1.html")
 
 
 @app.route('/discount')
