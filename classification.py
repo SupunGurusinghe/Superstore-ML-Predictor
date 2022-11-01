@@ -11,18 +11,9 @@ warnings.filterwarnings('ignore')
 
 
 # Load the csv file
-df = pd.read_csv(
-    "../../../../1.Supun Sameera/Software Engineering(SLIIT)/Semester 6/FDM/Assignment/ML Model Deployment/storefront.csv")
-df = df[['OrderDate', 'Segment', 'City', 'State', 'Region', 'SubCategory', 'Discount']].copy()
+df = pd.read_csv("data.csv")
+df = df[['OrderWeek', 'Segment', 'City', 'State', 'Region', 'SubCategory', 'Discount']].copy()
 
-
-# Modify discount column
-# df.loc[df['Discount'] > 0, 'Discount'] = 'Y'
-# df.loc[df['Discount'] == 0, 'Discount'] = 'N'
-
-
-df['OrderDate'] = pd.to_datetime(df['OrderDate'], errors='coerce')
-df['OrderDate'] = df['OrderDate'].dt.isocalendar().week
 df.columns = ['OrderWeek', 'Segment', 'City', 'State', 'Region', 'SubCategory', 'Discount']
 
 
@@ -34,7 +25,7 @@ df['Segment'] = le.fit_transform(df['Segment'])
 df['State'] = le.fit_transform(df['State'])
 df['Region'] = le.fit_transform(df['Region'])
 df['SubCategory'] = le.fit_transform(df['SubCategory'])
-df = df.astype({'Discount': 'string'})
+df['Discount'] = le.fit_transform(df['Discount'])
 
 
 # Split dataset
