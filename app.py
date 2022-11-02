@@ -61,7 +61,7 @@ def predict_discount():
         val_list.append(float(y_new))
     features = [np.array(val_list)]
     prediction = classification.predict(features)
-    return render_template("classification.html", prediction_text="Discount is {}".format(prediction))
+    return render_template("classification.html", prediction_text="Discount Status {}".format(prediction))
 
 
 @app.route("/predict_sales_target", methods=["POST"])
@@ -79,7 +79,7 @@ def predict_sales_target():
 
     features = [np.array(val_list)]
     prediction = regression.predict(features)
-    return render_template("regression.html", prediction_text="Target Quantity is {}".format(prediction))
+    return render_template("regression.html", prediction_text="Target Quantity is {}".format(abs(prediction)))
 
 
 # Import & Filter Data:
