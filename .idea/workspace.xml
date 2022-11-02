@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac8f3825-bbec-411e-8a8c-f38f020499e1" name="Default Changelist" comment="Project Updates">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ML Model Deployment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ML Model Deployment.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ac8f3825-bbec-411e-8a8c-f38f020499e1" name="Default Changelist" comment="Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/classification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cluster.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/cluster.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/regression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +68,9 @@
       <module name="ML Model Deployment" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -159,6 +156,9 @@
       <module name="ML Model Deployment" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -292,7 +292,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667227243296</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Commit">
+      <created>1667363234421</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667363234421</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Commit">
+      <created>1667366828582</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667366828582</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,6 +335,7 @@
     <MESSAGE value="Classification" />
     <MESSAGE value="Project" />
     <MESSAGE value="Project Updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project Updates" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
 </project>
