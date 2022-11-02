@@ -4,8 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
 # Load the csv file
-df = pd.read_csv(
-    "../../../../1.Supun Sameera/Software Engineering(SLIIT)/Semester 6/FDM/Assignment/ML Model Deployment/storefront.csv")
+df = pd.read_csv("storefront.csv")
 df = df[['OrderDate', 'Segment', 'Quantity']]
 
 # Change OrderDate to Date type
