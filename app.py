@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify, render_template
 from sklearn.preprocessing import LabelEncoder
-from mlxtend.frequent_patterns import apriori, association_rules
+
 
 # create flask app
 app = Flask(__name__)
@@ -117,6 +117,8 @@ def check_id(dataframe, productid):
 
 # Apriori Algorithm & Association Rules:
 def apriori_algo(dataframe, support_val=0.001):
+    from mlxtend.frequent_patterns import apriori, association_rules
+
     inv_pro_df = create_invoice_product_df(dataframe, id=True)
     frequent_itemsets = apriori(inv_pro_df, min_support=support_val, use_colnames=True)
     rules = association_rules(frequent_itemsets, metric="support", min_threshold=support_val)
